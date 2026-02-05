@@ -1,0 +1,219 @@
+body{
+
+    background: linear-gradient(135deg,#9929EA,#FF5FCF);
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+
+
+
+}
+
+
+h1{
+
+    font-family: 'Poppins','sans-serif';
+    text-transform: uppercase;
+
+    background: linear-gradient(to right,#9929EA,#000000,#FAEB92,#9929EA,#000000);
+    background-size: 200%;
+    background-clip: text;
+    padding-top: 0%;
+    margin: 2%;
+    color: #000000;
+    font-weight: bold;
+    font-size: 6rem;
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+
+}
+
+@keyframes animate-gradient{
+
+    to{
+        background-position: 200%;
+    }
+}
+
+.container{
+
+    padding: 8vh;
+    display: grid;
+    border: 0.5rem solid black;
+    border-radius: 2rem;
+    width: 70vh;
+    grid-template: repeat(5,1fr) / repeat(5,1fr);
+    gap: 20px;
+    background: #FAEB92;
+
+    grid-template-areas: 
+    "screen screen screen screen screen"
+    "ac seven eight nine divide"
+    "ac four five six multiply"
+    "del one two three minus"
+    "del zero dot equal plus";
+   
+
+
+}
+
+
+
+.container button{
+
+    padding: 2rem;
+    font-size: 2rem ;
+    border-radius: 1rem;
+    
+    background-color: #000000;
+    color: #FF5FCF;
+    transition: all 0.35s ease;
+    cursor: pointer;
+
+}
+
+.container button:hover{
+
+    background-color: #9929EA;
+    color: #000000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+
+}
+
+.container button:active{
+
+    opacity: 0.8;
+}
+
+
+.container .ac {
+    background-color: crimson;
+    color: white;
+    font-size: 2.2rem;
+}
+
+.container .del {
+    background-color: crimson;
+    color: white;
+    font-size: 2.2rem;
+}
+
+
+
+
+
+.zero{
+    grid-area: zero;
+}
+
+.dot{
+
+    grid-area: dot;
+}
+
+.equal{
+
+    grid-area: equal;
+}
+
+.plus{
+
+    grid-area: plus;
+}
+
+.one{
+
+    grid-area: one;
+}
+
+
+.two{
+
+    grid-area: two;
+}
+
+.three{
+
+    grid-area: three;
+}
+
+.minus{
+
+    grid-area: minus;
+}
+
+.four{
+
+    grid-area: four;
+}
+
+
+.five{
+
+    grid-area: five;
+}
+
+.six{
+
+    grid-area: six;
+}
+
+.multiply{
+
+    grid-area: multiply;
+}
+
+.seven{
+
+    grid-area: seven;
+}
+
+
+.eight{
+
+    grid-area: eight;
+}
+
+.nine{
+
+    grid-area: nine;
+}
+
+.divide{
+
+    grid-area: divide;
+}
+
+.ac{
+    padding: 0;
+    grid-area: ac;
+  
+   
+}
+
+.del{
+   
+    grid-area: del;
+    
+}
+
+
+.screen{
+
+    display: flex;
+    grid-area: screen;
+    background-color: #000000;
+    border-radius: 1rem;
+    font-size: 6rem;
+    color: white ;
+    padding-right: 2rem;
+    justify-content: end;
+    align-items: end;
+    
+
+
+}
+
