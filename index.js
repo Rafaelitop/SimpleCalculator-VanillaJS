@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
              let valor = boton.innerText
 
+             let btnAudio =  new Audio("resources/button.mp3")
+             btnAudio.play()
+
              
            
              if(valor === "x"){
@@ -70,6 +73,7 @@ document.addEventListener("DOMContentLoaded",()=>{
                     
                     pantalla.innerText = "Syntax error"
                     expresion = ""
+                    return
 
                 }
 
@@ -94,6 +98,53 @@ document.addEventListener("DOMContentLoaded",()=>{
 
             
         })
+
+
+    })
+
+
+   document.addEventListener("keydown",(e)=>{
+
+
+         console.log("Has presionado la tecla: "+e.key)
+
+
+         if(e.key === "Enter"){
+            try{
+               expresion =  eval(expresion).toString()
+               pantalla.innerText =  expresion
+               return
+
+            }catch(e){
+               console.log(e)
+               expresion = ""
+               pantalla.innerText = "Syntax error"
+               return
+
+            }
+         }else if(e.key === "Backspace"){
+
+            expresion = expresion.slice(0,-1)
+            pantalla.innerText =  expresion
+            return 
+
+
+         }
+
+
+         if(expresion === "0"){
+            expresion = ""
+         }
+
+
+         let valor = e.key
+
+   
+         expresion += valor
+         pantalla.innerText = expresion
+         
+
+      
     })
 
 
